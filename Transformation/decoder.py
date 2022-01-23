@@ -4,6 +4,8 @@ input_file = open(path, 'r')
 
 result = ''
 flag = input_file.readline()
+#Python automatically reads every character as utf16 because of the file structure
+
 for i in range(0, len(flag)):
     elem = flag[i]
     hex_value = hex(ord(elem))

@@ -13,6 +13,7 @@ e = int(line3[3:],10)
 print('n: ',n)
 print('e: ',e)
 
+#obtained from https://www.alpertron.com.ar/ECM.HTM
 p1 = 2434792384523484381583634042478415057961
 q1 = 650809615742055581459820253356987396346063
 print(p1*q1 == n)
@@ -21,6 +22,8 @@ phi = (p1-1)*(q1-1)
 
 print('phi obtained as p-1 * q-1: ',phi)
 
+#these two functions are widely available online when searching on how to solve
+#the extended euclidean algorithm. 
 def egcd(a, b):
     x,y, u,v = 0,1, 1,0
     while a != 0:
@@ -39,6 +42,7 @@ def modinv(a, m):
 d = modinv(e, phi)
 print('inverse modulus ',d)
 
+#this function incorportes c**d % n
 result = pow(c,d,n)
 
 hex_result = hex(result)

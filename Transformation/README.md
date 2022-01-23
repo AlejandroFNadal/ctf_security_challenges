@@ -1,0 +1,1 @@
+Essentially, in this challenge you are offered a line of utf16 characters and you are supposed to convert them to utf8. To do this, you take every character, split in two at the middle (utf16 are 2 bytes long, doing this results in two blocks of 1 byte) and then interpret it as a two separate utf8 characters
